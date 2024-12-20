@@ -1,0 +1,149 @@
+/* تعريف كل المتغيرات حتى يسهل التعديل عليه*/
+:root{
+    --primarycolor: rgb(24, 24, 102);
+    --secondarycolor: rgb(194, 146, 57);
+    --lightcolor: #ffffff;
+    --bgcolor-1: #171a1c;
+    --bgcolor-2: #22282a;
+    --padding: 8%;
+   
+
+}
+
+
+
+
+/*htmlاضافة كل الخصائص المشتركة لعناصر ال*/
+*{
+    /*حدف كل الهوامش و الفراغات*/
+    margin: 0;
+    padding: 0;
+    /*حتى يتم اخد حجم البوردر في حساب عرض و طول العناصر*/
+    box-sizing: border-box;
+}
+
+html{
+    /*تحديد تنسيق الخط لكل عناصر*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*تحديد الوحده رام*/
+    font-size: 16px;
+    color: var(--lightcolor);
+}
+h1{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--secondarycolor);
+}
+/*تحكم في خصائص نصوص سبان*/
+span{
+    color:var(--primarycolor);
+}
+h2{
+    font-size: 3rem;
+    letter-spacing: 0.12rem;
+    /*تغيير شكل المؤشر*/
+    cursor: pointer;
+}
+/*تحديد خصائص السكشن هوم*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: #171a1c;
+    display: flex;
+    flex-direction: column;
+}
+
+/*تنسيق مكان الناف بار على الصفحة*/
+nav{
+    padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+}
+/*تغيير شكل عناصر القائمه*/
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+    
+}
+/*تغيير شكل الروابط*/
+nav ul li a{
+    color: rgb(62, 62, 110);
+    text-decoration: none;
+    text-transform: capitalize;
+   /* انميشن*/
+    transition: 0.4s;
+}
+/*تغيير الخصائص عند تمرير المؤشر*/
+nav ul li a:hover{
+    color: var(--primarycolor);
+}
+/* تنسيق خانة التواصل و خانة راسلني*/
+.btn{
+    background-color: var(--primarycolor);
+    color: var(--lightcolor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.07rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primarycolor);
+}
+.content{
+    flex-grow:  1;
+    padding: 0 var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*تحديد مكان محتوايات العنصر*/
+.container-texts{
+   position: relative;
+    bottom: 40px;
+}
+/*تنسيق عناصر السوشيال ميديا*/
+.social{
+    margin-top: 3.5rem;
+}
+ .social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+
+ }
+ .social img:hover{
+    /*تغيير حجم العناصر*/
+    transform: scale(1.2);
+ }
+ .container-images{
+    width: 45%;
+    height: 90%;
+    position: relative;
+
+ }
+/*تنسيق مكان و حجم الصورة*/
+.container-images img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    transition: bottom 1s;
+}
+.container-images:hover .shape{
+    bottom: 40px;
+}
